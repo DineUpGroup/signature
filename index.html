@@ -137,6 +137,7 @@
         document.querySelector(`.${e.target.getAttribute('id')}`).textContent = e.target.value;
       };
       ['keyup', 'change'].forEach((event) => document.querySelector('#inputs').addEventListener(event, handler));
+      [...document.querySelectorAll('#inputs input')].forEach(target => handler({ target }));
     });
   </script>
 </body>
